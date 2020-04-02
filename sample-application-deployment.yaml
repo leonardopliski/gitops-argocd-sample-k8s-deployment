@@ -14,7 +14,7 @@ spec:
         app: argocd-sample-application
     spec:
       containers:
-        - image: leonardopliski/argocd-sample-application:sha-6940894
+        - image: leonardopliski/argocd-sample-application:sha-81152d5
           name: argocd-sample-application
           ports:
             - containerPort: 3000
