@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-sample-application
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: argocd-sample-application
+  template:
+    metadata:
+      labels:
+        app: argocd-sample-application
+    spec:
+      containers:
+        - image: leonardopliski/argocd-sample-application:latest
+          name: argocd-sample-application
+          ports:
+            - containerPort: 3000
