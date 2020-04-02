@@ -17,7 +17,7 @@ kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
-### Access the argocd UI through kubectl port-forwarding without exposing the service.
+### Access the argocd UI through kubectl port-forwarding without exposing the service
 ```
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 ```
@@ -41,12 +41,12 @@ argocd account update-password
 argocd app create sample-application --repo https://github.com/leonardopliski/gitops-argocd-sample-k8s-deployment.git --path . --dest-server https://kubernetes.default.svc --dest-namespace default
 ```
 
-### Sync with your repo
+### Sync your application
 ```
 argocd app sync sample-application
 ```
 
-### forward your service port
+### Forward your service port
 ```
 kubectl port-forward service/argocd-sample-application -n default 3000:3000
 ```
@@ -55,4 +55,6 @@ kubectl port-forward service/argocd-sample-application -n default 3000:3000
 ```
 http://localhost:3000/
 ```
+
+#### Enjoy shipping your new application versions through gitops with the deployment repository and the argocd UI
 
