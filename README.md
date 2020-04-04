@@ -2,7 +2,9 @@
 
 These are the sample k8s application deployment settings for our argocd [sample application](https://github.com/leonardopliski/gitops-argocd-sample-k8s-application)
 
-![Image of the argocd UI](https://i.imgur.com/PhIMmYS.png)
+![Image of the argocd UI](https://i.imgur.com/r6IfZtc.png)
+
+![Image of the argocd UI](https://i.imgur.com/D93LZ46.png)
 
 ## Installation steps
 
